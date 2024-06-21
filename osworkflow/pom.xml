@@ -30,7 +30,7 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>oswoflow</groupId>
+            <groupId>opensymphony</groupId>
             <artifactId>propertyset</artifactId>
             <version>1.4</version>
             <type>jar</type>
