@@ -29,10 +29,10 @@ public interface Workflow {
 	String BSF_SCRIPT = "script";
 	String BSF_SOURCE = "source";
 	String BSH_SCRIPT = "script";
+	String JS_SCRIPT = "javascript";
 
 	// statics
 	String CLASS_NAME = "class.name";
-	String EJB_LOCATION = "ejb.location";
 	String JNDI_LOCATION = "jndi.location";
 
 	// ~ Methods
