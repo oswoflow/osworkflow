@@ -22,17 +22,12 @@ public class JavaScriptValidator implements Validator {
 
     public void validate(Map transientVars, Map args, PropertySet ps) throws WorkflowException {
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {
             String contents = (String) args.get(AbstractWorkflow.JS_SCRIPT);
 
             WorkflowContext context = (WorkflowContext) transientVars.get("context");
             WorkflowEntry entry = (WorkflowEntry) transientVars.get("entry");
-
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(loader);
-            }
 
             engine.put("entry", entry);
             engine.put("context", context);
@@ -56,10 +51,6 @@ public class JavaScriptValidator implements Validator {
             String message = "Error executing JavaScript validator";
             log.error(message, e);
             throw new WorkflowException(message, e);
-        } finally {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(null);
-            }
         }
     }
 }

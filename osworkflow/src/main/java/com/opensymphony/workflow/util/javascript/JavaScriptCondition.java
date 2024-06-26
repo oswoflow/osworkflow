@@ -33,12 +33,8 @@ public class JavaScriptCondition implements Condition {
         WorkflowEntry entry = (WorkflowEntry) transientVars.get("entry");
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(loader);
-            }
 
             engine.put("entry", entry);
             engine.put("context", context);
@@ -57,10 +53,6 @@ public class JavaScriptCondition implements Condition {
             String message = "Could not execute JavaScript script";
             log.error(message, e);
             throw new WorkflowException(message, e);
-        } finally {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(null);
-            }
         }
     }
 }

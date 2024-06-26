@@ -24,15 +24,10 @@ public class JavaScriptFunctionProvider implements FunctionProvider {
 
         WorkflowContext context = (WorkflowContext) transientVars.get("context");
         WorkflowEntry entry = (WorkflowEntry) transientVars.get("entry");
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 
         try {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(loader);
-            }
-
             engine.put("entry", entry);
             engine.put("context", context);
             engine.put("transientVars", transientVars);
@@ -43,10 +38,6 @@ public class JavaScriptFunctionProvider implements FunctionProvider {
             String message = "Evaluation error while running JavaScript function script";
             log.error(message, e);
             throw new WorkflowException(message, e);
-        } finally {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(null);
-            }
         }
     }
 }

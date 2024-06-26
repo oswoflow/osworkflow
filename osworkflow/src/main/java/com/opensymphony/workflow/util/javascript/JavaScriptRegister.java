@@ -19,12 +19,8 @@ public class JavaScriptRegister implements Register {
         String script = (String) args.get(AbstractWorkflow.JS_SCRIPT);
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(loader);
-            }
 
             engine.put("entry", entry);
             engine.put("context", context);
@@ -34,10 +30,6 @@ public class JavaScriptRegister implements Register {
         } catch (ScriptException e) {
             String message = "Could not get object registered in to variable map";
             throw new WorkflowException(message, e);
-        } finally {
-            if (loader != null) {
-                Thread.currentThread().setContextClassLoader(null);
-            }
         }
     }
 }
