@@ -25,7 +25,7 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>oswoflow</groupId>
+            <groupId>opensymphony</groupId>
             <artifactId>oscore</artifactId>
             <version>2.2.7</version>
             <type>jar</type>
