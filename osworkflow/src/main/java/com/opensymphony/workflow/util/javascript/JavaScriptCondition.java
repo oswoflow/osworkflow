@@ -32,7 +32,7 @@ public class JavaScriptCondition implements Condition {
         WorkflowContext context = (WorkflowContext) transientVars.get("context");
         WorkflowEntry entry = (WorkflowEntry) transientVars.get("entry");
 
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {

@@ -80,7 +80,7 @@ public class FunctionDescriptor extends AbstractDescriptor {
 			out.print(entry.getKey());
 			out.print("\">");
 
-			if ("beanshell".equals(type) || "bsf".equals(type)) {
+			if ("beanshell".equals(type) || "bsf".equals(type) || "javascript".equals(type)) {
 				out.print("<![CDATA[");
 				out.print(entry.getValue());
 				out.print("]]>");

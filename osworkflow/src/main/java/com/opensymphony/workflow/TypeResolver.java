@@ -40,21 +40,25 @@ public class TypeResolver {
 		validators.put("local-ejb", "com.opensymphony.workflow.util.ejb.local.LocalEJBValidator");
 		validators.put("jndi", "com.opensymphony.workflow.util.jndi.JNDIValidator");
 		validators.put("beanshell", "com.opensymphony.workflow.util.beanshell.BeanShellValidator");
+		validators.put("javascript", "com.opensymphony.workflow.util.javascript.JavaScriptValidator");
 		validators.put("bsf", "com.opensymphony.workflow.util.bsf.BSFValidator");
 		conditions.put("remote-ejb", "com.opensymphony.workflow.util.ejb.remote.RemoteEJBCondition");
 		conditions.put("local-ejb", "com.opensymphony.workflow.util.ejb.local.LocalEJBCondition");
 		conditions.put("jndi", "com.opensymphony.workflow.util.jndi.JNDICondition");
 		conditions.put("beanshell", "com.opensymphony.workflow.util.beanshell.BeanShellCondition");
+		conditions.put("javascript", "com.opensymphony.workflow.util.javascript.JavascriptCondition");
 		conditions.put("bsf", "com.opensymphony.workflow.util.bsf.BSFCondition");
 		registers.put("remote-ejb", "com.opensymphony.workflow.util.ejb.remote.RemoteEJBRegister");
 		registers.put("local-ejb", "com.opensymphony.workflow.util.ejb.local.LocalEJBRegister");
 		registers.put("jndi", "com.opensymphony.workflow.util.jndi.JNDIRegister");
 		registers.put("beanshell", "com.opensymphony.workflow.util.beanshell.BeanShellRegister");
+		registers.put("javascript", "com.opensymphony.workflow.util.javascript.JavascriptRegister");
 		registers.put("bsf", "com.opensymphony.workflow.util.bsf.BSFRegister");
 		functions.put("remote-ejb", "com.opensymphony.workflow.util.ejb.remote.RemoteEJBFunctionProvider");
 		functions.put("local-ejb", "com.opensymphony.workflow.util.ejb.local.LocalEJBFunctionProvider");
 		functions.put("jndi", "com.opensymphony.workflow.util.jndi.JNDIFunctionProvider");
 		functions.put("beanshell", "com.opensymphony.workflow.util.beanshell.BeanShellFunctionProvider");
+		functions.put("javascript", "com.opensymphony.workflow.util.javascript.JavascriptProvider");
 		functions.put("bsf", "com.opensymphony.workflow.util.bsf.BSFFunctionProvider");
 	}
 

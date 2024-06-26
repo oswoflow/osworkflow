@@ -18,7 +18,7 @@ public class JavaScriptRegister implements Register {
     public Object registerVariable(WorkflowContext context, WorkflowEntry entry, Map args, PropertySet ps) throws WorkflowException {
         String script = (String) args.get(AbstractWorkflow.JS_SCRIPT);
 
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {

@@ -21,7 +21,7 @@ public class JavaScriptValidator implements Validator {
     private static final Log log = LogFactory.getLog(JavaScriptValidator.class);
 
     public void validate(Map transientVars, Map args, PropertySet ps) throws WorkflowException {
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {

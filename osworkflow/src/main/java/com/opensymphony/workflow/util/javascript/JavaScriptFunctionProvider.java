@@ -26,7 +26,7 @@ public class JavaScriptFunctionProvider implements FunctionProvider {
         WorkflowEntry entry = (WorkflowEntry) transientVars.get("entry");
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 
         try {
             if (loader != null) {
