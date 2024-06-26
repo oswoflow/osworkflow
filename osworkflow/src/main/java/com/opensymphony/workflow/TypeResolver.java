@@ -58,7 +58,7 @@ public class TypeResolver {
 		functions.put("local-ejb", "com.opensymphony.workflow.util.ejb.local.LocalEJBFunctionProvider");
 		functions.put("jndi", "com.opensymphony.workflow.util.jndi.JNDIFunctionProvider");
 		functions.put("beanshell", "com.opensymphony.workflow.util.beanshell.BeanShellFunctionProvider");
-		functions.put("javascript", "com.opensymphony.workflow.util.javascript.JavaScriptProvider");
+		functions.put("javascript", "com.opensymphony.workflow.util.javascript.JavaScriptFunctionProvider");
 		functions.put("bsf", "com.opensymphony.workflow.util.bsf.BSFFunctionProvider");
 	}
 
